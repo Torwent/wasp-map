@@ -1,18 +1,12 @@
-[submodule "layers_osrs"]
-	path = layers_osrs
+[submodule "static/layers_osrs"]
+	path = static/layers_osrs
 	url = https://github.com/mejrs/layers_osrs
-[submodule "layers_rs3"]
-	path = layers_rs3
-	url = https://github.com/mejrs/layers_rs3
-[submodule "wasm-pathfinder"]
-	path = wasm-pathfinder
+[submodule "static/wasm-pathfinder"]
+	path = static/wasm-pathfinder
 	url = https://github.com/mejrs/wasm-pathfinder
-[submodule "wasm-pathfinder-data"]
-	path = wasm-pathfinder-data
+[submodule "static/wasm-pathfinder-data"]
+	path = static/wasm-pathfinder-data
 	url = https://github.com/mejrs/wasm-pathfinder-data
-[submodule "data_rs3"]
-	path = data_rs3
-	url = https://github.com/mejrs/data_rs3
-[submodule "data_osrs"]
-	path = data_osrs
+[submodule "static/data_osrs"]
+	path = static/data_osrs
 	url = https://github.com/mejrs/data_osrs
