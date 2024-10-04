@@ -227,7 +227,7 @@ import "../leaflet.js";
       let pxyCoord = this.createString(
         this._map._plane,
         "[" + (this.globalX * 4 - 4096),
-        64 - (this.globalY * 4 - 50370) - 4 + "]"
+        60 - (this.globalY * 4 - 50370) + "]"
       );
       this._container.innerHTML = jCoord + "<br>" + pxyCoord;
       this._rect.setBounds([
