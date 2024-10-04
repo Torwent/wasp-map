@@ -9,6 +9,7 @@ You cna contribute by searching for old game caches
 ## Cloning
 
 You can clone the repository and use it locally. Most of the data used is located in git submodules. As such you need to initialize those as well. You can do that with:
+
 ```text
 git clone --recurse-submodules https://github.com/mejrs/mejrs.github.io.git
 ```
@@ -19,3 +20,23 @@ Note that you can not simply open this in your browser - you need to set up a lo
 
 The data in this repository can be generated using [https://github.com/mejrs/rs3cache/](https://github.com/mejrs/rs3cache/ "Tools and api for reading and interpreting the RuneScape 3 game cache.").
 For more information on how the maptiles are built, see [this document](https://docs.google.com/document/d/1xv7iVBkG6eWDrXFhIYi77AVodJc0D-4Aqn0ncZXKJfw/edit# "RuneScape Wiki Maps Project - Google Docs").
+
+## Hosting
+
+Install [bun](https://bun.sh/docs/installation) (might require a restart):
+
+```
+powershell -c "irm bun.sh/install.ps1|iex"
+```
+
+Navigate to the project directory and install the dependencies (Hono):
+
+```
+bun install
+```
+
+Host:
+
+```
+bun run dev
+```
