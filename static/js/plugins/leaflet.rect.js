@@ -261,7 +261,7 @@ export default void (function (factory) {
 			this.y1.value = global.y1
 			this.y2.value = global.y2
 			this.center.value = `${center_width}, ${center_height}`
-			this.botmap.value = `Map.SetupChunk(Chunk(${chunk.x1}, ${chunk.y1}, ${chunk.x2}, ${chunk.y2}), 0);`
+			this.botmap.value = `Map.SetupChunk(Chunk([${chunk.x1},${chunk.y1},${chunk.x2},${chunk.y2}], 0));`
 		},
 
 		expand: function () {
