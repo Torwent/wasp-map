@@ -1,0 +1,20 @@
+{
+  "id": 41181,
+  "name": "Trailblazer globe",
+  "models_2": [
+    41039
+  ],
+  "dim_x": 2,
+  "dim_y": 2,
+  "unknown_19": 1,
+  "ambient": 20,
+  "actions": [
+    "Inspect",
+    "Spin-globe",
+    null,
+    null,
+    "Remove"
+  ],
+  "contrast": 20,
+  "category": 206
+}

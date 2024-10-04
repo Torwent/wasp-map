@@ -1,0 +1,19 @@
+{
+  "id": 12895,
+  "name": "Tree",
+  "models_2": [
+    3942
+  ],
+  "dim_x": 2,
+  "dim_y": 2,
+  "colours": [
+    [
+      7471,
+      13592
+    ]
+  ],
+  "scale_x": 90,
+  "scale_y": 140,
+  "scale_z": 90,
+  "mapscene": 6
+}

@@ -1,0 +1,16 @@
+{
+  "id": 1384,
+  "name": "Dead tree",
+  "models_2": [
+    1700
+  ],
+  "actions": [
+    "Chop down",
+    null,
+    "hidden",
+    null,
+    null
+  ],
+  "category": 189,
+  "mapscene": 6
+}

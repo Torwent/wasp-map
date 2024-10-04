@@ -1,0 +1,19 @@
+{
+  "id": 13321,
+  "models": [
+    [
+      0,
+      12440
+    ]
+  ],
+  "name": "Door",
+  "is_transparent": true,
+  "actions": [
+    "Close",
+    null,
+    null,
+    null,
+    null
+  ],
+  "category": 206
+}

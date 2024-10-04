@@ -1,0 +1,17 @@
+{
+  "id": 18782,
+  "name": "Armour case",
+  "models_2": [
+    18994
+  ],
+  "ambient": 35,
+  "actions": [
+    "Open",
+    null,
+    null,
+    null,
+    "Remove"
+  ],
+  "category": 206,
+  "unknown_69": 13
+}

@@ -1,0 +1,18 @@
+{
+  "id": 28579,
+  "name": "Hard rock",
+  "models_2": [
+    30170
+  ],
+  "unknown_21": true,
+  "unknown_22": true,
+  "unknown_27": false,
+  "actions": [
+    "Excavate",
+    null,
+    null,
+    null,
+    null
+  ],
+  "category": 913
+}

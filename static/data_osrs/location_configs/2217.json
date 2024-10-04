@@ -1,0 +1,27 @@
+{
+  "id": 2217,
+  "models": [
+    [
+      10,
+      1465
+    ],
+    [
+      22,
+      20043
+    ]
+  ],
+  "name": "Mound of earth",
+  "dim_x": 3,
+  "dim_y": 3,
+  "unknown_27": false,
+  "actions": [
+    "Look-at",
+    "Search",
+    null,
+    null,
+    null
+  ],
+  "scale_x": 256,
+  "scale_z": 256,
+  "mapscene": 11
+}

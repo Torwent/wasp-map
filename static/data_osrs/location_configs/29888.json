@@ -1,0 +1,11 @@
+{
+  "id": 29888,
+  "name": "Crystal structure",
+  "models_2": [
+    32517
+  ],
+  "dim_x": 5,
+  "dim_y": 8,
+  "is_transparent": true,
+  "unknown_19": 1
+}

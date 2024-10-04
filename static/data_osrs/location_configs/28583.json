@@ -1,0 +1,19 @@
+{
+  "id": 28583,
+  "name": "Pot of dynamite",
+  "models_2": [
+    30187,
+    30184
+  ],
+  "unknown_21": true,
+  "unknown_22": true,
+  "unknown_27": false,
+  "actions": [
+    "Light",
+    null,
+    null,
+    null,
+    null
+  ],
+  "category": 915
+}

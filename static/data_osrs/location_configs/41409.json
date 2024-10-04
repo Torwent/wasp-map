@@ -1,0 +1,15 @@
+{
+  "id": 41409,
+  "name": "Hammers",
+  "models_2": [
+    32072
+  ],
+  "ambient": 20,
+  "actions": [
+    "Take",
+    null,
+    null,
+    null,
+    null
+  ]
+}

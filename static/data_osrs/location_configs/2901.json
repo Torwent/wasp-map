@@ -1,0 +1,21 @@
+{
+  "id": 2901,
+  "name": "Mossy rock",
+  "models_2": [
+    2157
+  ],
+  "actions": [
+    "Search",
+    null,
+    null,
+    null,
+    null
+  ],
+  "colours": [
+    [
+      14228,
+      127
+    ]
+  ],
+  "mapscene": 12
+}

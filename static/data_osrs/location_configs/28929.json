@@ -1,0 +1,17 @@
+{
+  "id": 28929,
+  "name": "Juna",
+  "models_2": [
+    6536
+  ],
+  "dim_x": 2,
+  "unknown_19": 1,
+  "unknown_27": false,
+  "actions": [
+    "Talk-to",
+    "Story",
+    null,
+    null,
+    null
+  ]
+}

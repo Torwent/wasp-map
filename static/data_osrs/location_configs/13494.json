@@ -1,0 +1,25 @@
+{
+  "id": 13494,
+  "name": "Red Castlewars armour",
+  "models_2": [
+    12383
+  ],
+  "actions": [
+    null,
+    null,
+    null,
+    null,
+    "Remove"
+  ],
+  "colours": [
+    [
+      61,
+      937
+    ],
+    [
+      41,
+      127
+    ]
+  ],
+  "category": 206
+}

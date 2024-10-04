@@ -1,0 +1,17 @@
+{
+  "id": 29320,
+  "name": "Crate",
+  "models_2": [
+    32249,
+    32267
+  ],
+  "ambient": 25,
+  "actions": [
+    "Take-concoction",
+    "Take-5-concoction",
+    "Take-10-concoction",
+    null,
+    null
+  ],
+  "unknown_69": 14
+}

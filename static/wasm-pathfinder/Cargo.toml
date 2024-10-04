@@ -1,0 +1,28 @@
+[package]
+name = "wasm-pathfinder"
+version = "0.1.0"
+authors = ["mejrs"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+wasm-bindgen = { version = "0.2.63", features = ["serde-serialize"]  }
+wasm-bindgen-futures = "0.4.10"
+web-sys = { version = "0.3.37", features = ['console','Headers','Request','RequestInit', 'RequestMode', 'Response', 'Window', 'ReadableStream'] }
+serde = { version = "1.0.80", features = ["derive"] }
+serde_derive = "^1.0.59"
+futures = { version = "0.3.5"}
+itertools = { version = "0.9.0"}
+console_error_panic_hook = { version = "0.1.1", optional = true }
+ndarray = "0.15.3"
+fnv = "1.0.7"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
+wasm-opt = false

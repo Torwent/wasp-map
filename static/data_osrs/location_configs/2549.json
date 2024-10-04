@@ -1,0 +1,27 @@
+{
+  "id": 2549,
+  "models": [
+    [
+      0,
+      639
+    ]
+  ],
+  "name": "Door",
+  "actions": [
+    "Close",
+    null,
+    null,
+    null,
+    null
+  ],
+  "colours": [
+    [
+      7089,
+      61
+    ]
+  ],
+  "textures": {
+    "3": 16
+  },
+  "mirror": true
+}

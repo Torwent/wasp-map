@@ -1,0 +1,24 @@
+{
+  "id": 11360,
+  "name": "Tin rocks",
+  "models_2": [
+    1390
+  ],
+  "is_transparent": true,
+  "unknown_21": true,
+  "actions": [
+    "Mine",
+    null,
+    "hidden",
+    null,
+    null
+  ],
+  "colours": [
+    [
+      24,
+      53
+    ]
+  ],
+  "category": 198,
+  "mapscene": 145
+}

@@ -1,0 +1,16 @@
+{
+  "id": 10865,
+  "name": "Low wall",
+  "models_2": [
+    10776
+  ],
+  "dim_y": 2,
+  "is_transparent": true,
+  "actions": [
+    "Climb-over",
+    null,
+    null,
+    null,
+    null
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 29889,
+  "name": "Bubbles",
+  "models_2": [
+    32529
+  ],
+  "is_transparent": true,
+  "unknown_19": 1,
+  "unknown_21": true,
+  "unknown_22": true,
+  "occludes_1": false,
+  "unknown_24": 480,
+  "unknown_27": false,
+  "actions": [
+    "Fish",
+    null,
+    "hidden",
+    null,
+    null
+  ],
+  "colours": [
+    [
+      29194,
+      127
+    ]
+  ],
+  "category": 1001,
+  "unknown_69": 14,
+  "params": {
+    "1545": 1
+  }
+}

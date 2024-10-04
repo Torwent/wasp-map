@@ -1,0 +1,23 @@
+{
+  "id": 2241,
+  "models": [
+    [
+      10,
+      611
+    ],
+    [
+      1,
+      607
+    ]
+  ],
+  "name": "Carved doors",
+  "dim_x": 2,
+  "actions": [
+    "Open",
+    "Search",
+    null,
+    null,
+    null
+  ],
+  "mirror": true
+}

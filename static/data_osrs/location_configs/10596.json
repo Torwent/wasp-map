@@ -1,0 +1,22 @@
+{
+  "id": 10596,
+  "name": "Icy Cavern",
+  "models_2": [
+    10368
+  ],
+  "dim_x": 3,
+  "dim_y": 2,
+  "unknown_21": true,
+  "unknown_22": true,
+  "unknown_27": false,
+  "ambient": 15,
+  "actions": [
+    "Enter",
+    null,
+    null,
+    null,
+    null
+  ],
+  "contrast": 15,
+  "unknown_69": 11
+}

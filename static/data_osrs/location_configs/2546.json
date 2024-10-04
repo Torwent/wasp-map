@@ -1,0 +1,26 @@
+{
+  "id": 2546,
+  "models": [
+    [
+      0,
+      639
+    ]
+  ],
+  "name": "Door",
+  "actions": [
+    "Open",
+    null,
+    null,
+    null,
+    null
+  ],
+  "colours": [
+    [
+      7089,
+      61
+    ]
+  ],
+  "textures": {
+    "3": 16
+  }
+}

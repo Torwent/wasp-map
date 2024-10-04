@@ -1,0 +1,43 @@
+.map-icon {
+
+    max-width: 35px;
+    max-height: 35px;
+	min-width:20px;
+	min-height:20px;
+  transform: translate(-50%, -50%);
+
+	
+
+
+
+  
+}
+
+
+
+.text-label-0 {
+   font: 15px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  
+}
+.text-label-1 {
+  font: 17px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+}
+.text-label-2 {
+  font: 20px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+ 
+}
+.tooltip{
+	
+	text-align: center;
+}
+
+
+.teleport-icon{
+	
+filter: drop-shadow(0px 0px 5px white);
+}
+

@@ -1,0 +1,24 @@
+{
+  "id": 11376,
+  "name": "Runite rocks",
+  "models_2": [
+    1390
+  ],
+  "is_transparent": true,
+  "unknown_21": true,
+  "actions": [
+    "Mine",
+    null,
+    "hidden",
+    null,
+    null
+  ],
+  "colours": [
+    [
+      24,
+      34099
+    ]
+  ],
+  "category": 202,
+  "mapscene": 150
+}

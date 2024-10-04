@@ -1,0 +1,12 @@
+{
+  "id": 5964,
+  "name": "Cannonball",
+  "models_2": [
+    5869
+  ],
+  "dim_y": 7,
+  "is_transparent": true,
+  "unknown_19": 1,
+  "unknown_24": 1845,
+  "unknown_27": false
+}

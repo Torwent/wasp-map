@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+	background-color: black;
+}
+#selection {
+  width: 50%;
+  margin: 0 auto;
+}
+
+img.huechange { filter: hue-rotate(120deg); }
+
+.grid {
+	outline: 1px solid white;
+	text-align: center;
+	line-height: 256px;
+	color:white;
+	font-size: 30px;
+}
+
+.leaflet-popup-content{
+	overflow-wrap: break-word;
+	width: 220px;
+}
+
+.leaflet-control-message-container{
+	position: relative;
+	top: 5px;
+	pointer-events: none;
+	z-index:1337;
+	
+}
+
+.object-image-container{
+		text-align:center;
+}
+
+.object-image{
+	max-width : 100%;
+	max-height: 200px;
+
+ }
+ 
+.tabbutton {
+	background: #f8f8f8;
+	display: inline-block;
+	padding: 5px;
+	margin-left: -1px;
+	position: relative;
+	list-style-type: none;
+	left: 1px;
+	top: 1px;
+	cursor: pointer;
+}
+
+.content {
+}
+.tab:target {
+    display: block;
+}
+ 
+ 
+.leaflet-control-message-box {
+	position: relative;
+	left: 50%;
+	display: table;
+	transform: translate(-50%, 0%);
+	background: #fff;
+	background-clip: padding-box;
+	padding: 5px 5px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+	font: 20px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.leaflet-control-message-content{
+	position: relative;
+	display: inline-block;
+	
+}
+
+.leaflet-control-message-clear{
+	position: relative;
+	margin-left: 5px;
+	color: grey;
+	display: inline-block;
+	pointer-events: auto;
+}
+
+.leaflet-tile-loaded {
+	visibility: inherit;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+	}
+
+
+.map-label-container{
+	display:block;
+	width: max-content;
+	position: relative;
+	overflow-wrap: normal;
+}
+	   
+.map-label-sub-container{
+	position: relative;
+	max-width:170px;
+}
+
+.map-label{
+	font: 16px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: white;
+	stroke:black;
+
+	text-shadow:
+	-1px -1px 0 #000,  
+	 1px -1px 0 #000,
+	 -1px 1px 0 #000,
+	  1px 1px 0 #000;
+}
+
+.leaflet-center {
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.leaflet-middle {
+    top: 50%;
+    position: absolute;
+    z-index: 1000;
+    pointer-events: none;
+  transform: translate(0%, -50%);
+
+}
+
+.leaflet-center.leaflet-middle {
+  transform: translate(-50%, -50%);
+}

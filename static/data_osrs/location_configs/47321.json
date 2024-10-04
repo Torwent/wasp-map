@@ -1,0 +1,27 @@
+{
+  "id": 47321,
+  "name": "Banner",
+  "models_2": [
+    47520
+  ],
+  "dim_y": 6,
+  "unknown_17": false,
+  "ambient": 20,
+  "contrast": 20,
+  "colours": [
+    [
+      6969,
+      20019
+    ],
+    [
+      565,
+      20248
+    ],
+    [
+      557,
+      20242
+    ]
+  ],
+  "translate_y": 65526,
+  "translate_z": 65526
+}

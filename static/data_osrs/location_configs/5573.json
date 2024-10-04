@@ -1,0 +1,17 @@
+{
+  "id": 5573,
+  "name": "Coop",
+  "models_2": [
+    5503,
+    5502
+  ],
+  "dim_x": 2,
+  "actions": [
+    "Search",
+    null,
+    null,
+    null,
+    null
+  ],
+  "category": 1469
+}

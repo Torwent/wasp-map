@@ -1,0 +1,33 @@
+{
+  "id": 4121,
+  "name": "Black Chest",
+  "models_2": [
+    6615
+  ],
+  "ambient": 20,
+  "actions": [
+    "Open",
+    null,
+    null,
+    null,
+    null
+  ],
+  "colours": [
+    [
+      10394,
+      0
+    ],
+    [
+      10518,
+      8
+    ],
+    [
+      10638,
+      926
+    ]
+  ],
+  "scale_x": 72,
+  "scale_y": 72,
+  "scale_z": 72,
+  "unknown_69": 11
+}

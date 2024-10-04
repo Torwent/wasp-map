@@ -1,0 +1,16 @@
+{
+  "id": 1402,
+  "name": "Jungle plant",
+  "models_2": [
+    1677
+  ],
+  "dim_x": 2,
+  "dim_y": 2,
+  "is_transparent": true,
+  "colours": [
+    [
+      22439,
+      16955
+    ]
+  ]
+}

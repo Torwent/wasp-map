@@ -1,0 +1,15 @@
+{
+  "id": 42383,
+  "name": "Pine tree",
+  "models_2": [
+    42507,
+    42517
+  ],
+  "dim_x": 2,
+  "dim_y": 2,
+  "unknown_21": true,
+  "ambient": 20,
+  "contrast": 10,
+  "scale_y": 112,
+  "mapscene": 103
+}
