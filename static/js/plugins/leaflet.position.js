@@ -191,11 +191,12 @@ import "../leaflet.js"
 			let chunkCoords =
 				"Chunk(" +
 				this.createString(this.convert(this.globalX, this.globalY)) +
-				") Plane " +
-				this._map._plane
+				", " +
+				parseInt(this._map._plane) +
+				")"
 			let simbaCoords =
 				"[" +
-				parseInt(this.globalX * 4 - 4096) +
+				parseInt(this.globalX * 4 - 4096 + 13056 * this._map._plane) +
 				", " +
 				parseInt(60 - (this.globalY * 4 - 50370)) +
 				"]"

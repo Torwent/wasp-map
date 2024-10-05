@@ -204,12 +204,6 @@ export default void (function (factory) {
 			this.botmap.setAttribute("type", "text")
 			this.botmap.setAttribute("name", "botmap")
 			this.botmap.setAttribute("readOnly", true)
-			this.botmap.addEventListener("click", () => {
-				navigator.clipboard.writeText(this.botmap.value).then(
-					() => console.log("Copied to the clipboard: this.botmap.value"),
-					() => console.error("Cannot copy text to clipboard")
-				)
-			})
 
 			rectForm.addEventListener("change", this.changeRect.bind(this))
 
@@ -261,7 +255,9 @@ export default void (function (factory) {
 			this.y1.value = global.y1
 			this.y2.value = global.y2
 			this.center.value = `${center_width}, ${center_height}`
-			this.botmap.value = `Map.SetupChunk(Chunk([${chunk.x1},${chunk.y1},${chunk.x2},${chunk.y2}], 0));`
+			this.botmap.value = `Map.SetupChunk(Chunk([${chunk.x1},${chunk.y1},${chunk.x2},${
+				chunk.y2
+			}], ${this._map.getPlane()}));`
 		},
 
 		expand: function () {
@@ -284,7 +280,15 @@ export default void (function (factory) {
 	L.Map.addInitHook(function () {
 		if (this.options.rect) {
 			this.rect = L.control.display.rect()
+
 			this.addControl(this.rect)
+			this.rect.botmap.addEventListener("click", () => {
+				this.rect.botmap.select()
+				navigator.clipboard.writeText(this.rect.botmap.value).then(
+					() => this.addMessage(`Copied to clipboard: ${this.rect.botmap.value}`),
+					() => console.error("Cannot copy text to clipboard")
+				)
+			})
 		}
 	})
 })
