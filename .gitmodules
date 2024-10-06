@@ -1,0 +1,3 @@
+[submodule "static/layers-osrs"]
+	path = static/layers-osrs
+	url = https://github.com/Torwent/wasp-map-layers
