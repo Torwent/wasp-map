@@ -62,7 +62,7 @@ void (function (global) {
 		.addTo(runescape_map)
 
 	L.tileLayer
-		.main("layers-osrs/mapsquares/{zoom}/{plane}_{x}_{y}.png", {
+		.main("layers-osrs/map/{zoom}/{plane}/{x}-{y}.png", {
 			minZoom: -4,
 			maxNativeZoom: 4,
 			maxZoom: 8
