@@ -1,8 +1,12 @@
-import { Hono } from "hono";
-import { serveStatic } from "hono/bun";
+import { $ } from "bun"
+import { Hono } from "hono"
+import { serveStatic } from "hono/bun"
 
-const app = new Hono();
+const output = await $`cd static/layers-osrs && bun install && bun start`.text()
+console.log(output)
 
-app.use("/*", serveStatic({ root: "./static/" }));
+const app = new Hono()
 
-export default app;
+app.use("/*", serveStatic({ root: "./static/" }))
+
+export default app
