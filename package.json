@@ -18,6 +18,8 @@
 		"typescript": "^5.0.0"
 	},
 	"dependencies": {
-		"hono": "^4.6.3"
+		"hono": "^4.6.3",
+		"node-stream-zip": "^1.15.0",
+		"sharp": "^0.33.5"
 	}
 }
