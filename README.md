@@ -1,42 +1,48 @@
-# RuneScape Cartography through the ages
+## Development server 💻
 
-This was developed as part of the [RuneScape Wiki](https://runescape.wiki/ "The RuneScape Wiki") maps project.
-
-## Contributing
-
-You cna contribute by searching for old game caches
-
-## Cloning
-
-You can clone the repository and use it locally. Most of the data used is located in git submodules. As such you need to initialize those as well. You can do that with:
-
-```text
-git clone --recurse-submodules https://github.com/mejrs/mejrs.github.io.git
-```
-
-Note that you can not simply open this in your browser - you need to set up a local HTTP server to run it.
-
-## Maptile rendering
-
-The data in this repository can be generated using [https://github.com/mejrs/rs3cache/](https://github.com/mejrs/rs3cache/ "Tools and api for reading and interpreting the RuneScape 3 game cache.").
-For more information on how the maptiles are built, see [this document](https://docs.google.com/document/d/1xv7iVBkG6eWDrXFhIYi77AVodJc0D-4Aqn0ncZXKJfw/edit# "RuneScape Wiki Maps Project - Google Docs").
-
-## Hosting
-
-Install [bun](https://bun.sh/docs/installation) (might require a restart):
+Install [bun](https://bun.sh/docs/installation) (this is for windows, if using a different OS look it up in bun docs)(might require a restart):
 
 ```
 powershell -c "irm bun.sh/install.ps1|iex"
 ```
 
-Navigate to the project directory and install the dependencies (Hono):
+Now you will need to install the project dependencies, it's submodule dependencies, run the submodule to generate the map tiles (which will take a few minutes).
+You can do that with the following commands assuming you are currently on the project directory:
 
 ```
 bun install
+cd static/layers-osrs/
+bun install
+bun start
 ```
 
-Host:
+Now you are finally able to run the main project, make sure to go back to the main project directory if you are not there yet:
 
 ```
-bun run dev
+cd ../..
+bun dev
 ```
+
+Visit http://localhost:3000/ and your map should be online 😄
+
+## Hosting 🚀
+
+You can basically follow the same commands as above. the only change is that you might want to add `NODE_ENV=production` and `--production` flag to the main project install command.
+
+### Coolify 🆒
+
+To host on coolify specifically you should pick the following settings:
+
+- Build pack: \*Nixpacks\*\*
+- Build:
+- Install command: `bun install --production & cd static/layers-osrs & bun install`
+- Build command: `echo hello world` this is just to get around a coolify bug. Might be able to leave it blank in the future
+- Start command: `bun static/layers-osrs/main.ts & NODE_ENV=production bun src/main.ts`
+- Port: **3000**
+
+The rest leave on the defaults 👍
+
+## Credits 🤗
+
+This was developed as part of the [RuneScape Wiki](https://runescape.wiki/ "The RuneScape Wiki") maps project.
+This specific project was forked from https://github.com/mejrs/mejrs.github.io to change things I didn't like about it for my personal needs.
