@@ -1,12 +1,11 @@
 {
 	"name": "osrs-map",
-	"module": "index.ts",
+	"module": "main.ts",
 	"scripts": {
 		"test": "bun test",
-		"gentypes": "bun run supabase gen types typescript --linked > src/lib/types/supabase.ts",
-		"dev": "bun run --watch src/index.ts",
-		"build": "bun build src/index.ts --outdir build",
-		"start": "NODE_ENV=production bun src/index.ts"
+		"dev": "bun run --watch src/main.ts",
+		"build": "bun build src/main.ts --outdir build",
+		"start": "NODE_ENV=production bun src/main.ts"
 	},
 	"type": "module",
 	"devDependencies": {
