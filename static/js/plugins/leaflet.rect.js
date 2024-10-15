@@ -198,6 +198,13 @@ export default void (function (factory) {
 			this.center.setAttribute("name", "center")
 			this.center.setAttribute("readOnly", true)
 
+			let tboxLabel = L.DomUtil.create("label", "leaflet-control-display-label", rectForm)
+			tboxLabel.innerHTML = "TBox"
+			this.tbox = L.DomUtil.create("input", "leaflet-control-map-input", rectForm)
+			this.tbox.setAttribute("type", "text")
+			this.tbox.setAttribute("name", "tbox")
+			this.tbox.setAttribute("readOnly", true)
+
 			let mapSetup = L.DomUtil.create("label", "leaflet-control-display-label", rectForm)
 			mapSetup.innerHTML = "MapSetup"
 			this.botmap = L.DomUtil.create("input", "leaflet-control-map-input", rectForm)
@@ -236,9 +243,9 @@ export default void (function (factory) {
 			}
 
 			let global = {
-				x1: bounds.getWest() * 4 - 4096,
+				x1: bounds.getWest() * 4 - 4096 + 13056 * this._map._plane,
 				y1: 60 - (bounds.getNorth() * 4 - 50370),
-				x2: bounds.getEast() * 4 - 4096,
+				x2: bounds.getEast() * 4 - 4096 + 13056 * this._map._plane,
 				y2: 60 - (bounds.getSouth() * 4 - 50370)
 			}
 
@@ -255,6 +262,7 @@ export default void (function (factory) {
 			this.y1.value = global.y1
 			this.y2.value = global.y2
 			this.center.value = `${center_width}, ${center_height}`
+			this.tbox.value = `[${global.x1}, ${global.y1}, ${global.x2}, ${global.y2}]`
 			this.botmap.value = `Map.SetupChunk(Chunk([${chunk.x1},${chunk.y1},${chunk.x2},${
 				chunk.y2
 			}], ${this._map.getPlane()}));`
@@ -286,6 +294,13 @@ export default void (function (factory) {
 				this.rect.botmap.select()
 				navigator.clipboard.writeText(this.rect.botmap.value).then(
 					() => this.addMessage(`Copied to clipboard: ${this.rect.botmap.value}`),
+					() => console.error("Cannot copy text to clipboard")
+				)
+			})
+			this.rect.tbox.addEventListener("click", () => {
+				this.rect.tbox.select()
+				navigator.clipboard.writeText(this.rect.tbox.value).then(
+					() => this.addMessage(`Copied to clipboard: ${this.rect.tbox.value}`),
 					() => console.error("Cannot copy text to clipboard")
 				)
 			})
