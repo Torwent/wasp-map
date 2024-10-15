@@ -10,6 +10,7 @@ import "../plugins/leaflet.position.js"
 import "../plugins/leaflet.displays.js"
 import "../plugins/leaflet.urllayers.js"
 import "../plugins/leaflet.rect.js"
+import "../plugins/leaflet.polygon.js"
 import "../plugins/leaflet.clickcopy.js"
 import "../plugins/leaflet.maplabels.js"
 
@@ -27,6 +28,7 @@ void (function (global) {
 		positionControl: true,
 		messageBox: true,
 		rect: true,
+		polygon: true,
 		initialMapId: -1,
 		plane: 0,
 		x: 3200,
