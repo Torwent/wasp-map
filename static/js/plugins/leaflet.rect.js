@@ -160,13 +160,6 @@ export default void (function (factory) {
 			this.height.setAttribute("type", "number")
 			this.height.setAttribute("name", "height")
 
-			let areaLabel = L.DomUtil.create("label", "leaflet-control-display-label", rectForm)
-			areaLabel.innerHTML = "Area"
-			this.area = L.DomUtil.create("input", "leaflet-control-display-input-number", rectForm)
-			this.area.setAttribute("type", "number")
-			this.area.setAttribute("name", "area")
-			this.area.setAttribute("readonly", true)
-
 			let x1Label = L.DomUtil.create("label", "leaflet-control-display-label", rectForm)
 			x1Label.innerHTML = "X1"
 			this.x1 = L.DomUtil.create("input", "leaflet-control-display-input-number", rectForm)
@@ -191,19 +184,19 @@ export default void (function (factory) {
 			this.y2.setAttribute("type", "number")
 			this.y2.setAttribute("name", "y2")
 
-			let centerLabel = L.DomUtil.create("label", "leaflet-control-display-label", rectForm)
-			centerLabel.innerHTML = "Center"
-			this.center = L.DomUtil.create("input", "leaflet-control-display-input-number", rectForm)
-			this.center.setAttribute("type", "text")
-			this.center.setAttribute("name", "center")
-			this.center.setAttribute("readOnly", true)
+			let simba1400 = L.DomUtil.create("label", "leaflet-control-display-label", rectForm)
+			simba1400.innerHTML = "Simba1400"
+			this.map1400 = L.DomUtil.create("input", "leaflet-control-map-input", rectForm)
+			this.map1400.setAttribute("type", "text")
+			this.map1400.setAttribute("name", "map1400")
+			this.map1400.setAttribute("readOnly", true)
 
-			let mapSetup = L.DomUtil.create("label", "leaflet-control-display-label", rectForm)
-			mapSetup.innerHTML = "MapSetup"
-			this.botmap = L.DomUtil.create("input", "leaflet-control-map-input", rectForm)
-			this.botmap.setAttribute("type", "text")
-			this.botmap.setAttribute("name", "botmap")
-			this.botmap.setAttribute("readOnly", true)
+			let simba2000 = L.DomUtil.create("label", "leaflet-control-display-label", rectForm)
+			simba2000.innerHTML = "Simba2000"
+			this.map2000 = L.DomUtil.create("input", "leaflet-control-map-input", rectForm)
+			this.map2000.setAttribute("type", "text")
+			this.map2000.setAttribute("name", "map2000")
+			this.map2000.setAttribute("readOnly", true)
 
 			rectForm.addEventListener("change", this.changeRect.bind(this))
 
@@ -244,20 +237,20 @@ export default void (function (factory) {
 
 			let width = global.x2 - global.x1
 			let height = global.y1 - global.y2
-			let center_width = (global.x1 + global.x2) / 2
-			let center_height = (global.y1 + global.y2) / 2
 
 			this.width.value = width
 			this.height.value = height
-			this.area.value = height * width
 			this.x1.value = global.x1
 			this.x2.value = global.x2
 			this.y1.value = global.y1
 			this.y2.value = global.y2
-			this.center.value = `${center_width}, ${center_height}`
-			this.botmap.value = `Map.SetupChunk(Chunk([${chunk.x1},${chunk.y1},${chunk.x2},${
+			this.map1400.value = `Map.SetupChunk(Chunk([${chunk.x1},${chunk.y1},${chunk.x2},${
 				chunk.y2
 			}], ${this._map.getPlane()}));`
+
+			this.map2000.value = `Map.Setup(Chunk(Box(${chunk.x1},${chunk.y1},${chunk.x2},${
+				chunk.y2
+			}), ${this._map.getPlane()}));`
 		},
 
 		expand: function () {
@@ -282,10 +275,18 @@ export default void (function (factory) {
 			this.rect = L.control.display.rect()
 
 			this.addControl(this.rect)
-			this.rect.botmap.addEventListener("click", () => {
-				this.rect.botmap.select()
-				navigator.clipboard.writeText(this.rect.botmap.value).then(
-					() => this.addMessage(`Copied to clipboard: ${this.rect.botmap.value}`),
+			this.rect.map1400.addEventListener("click", () => {
+				this.rect.map1400.select()
+				navigator.clipboard.writeText(this.rect.map1400.value).then(
+					() => this.addMessage(`Copied to clipboard: ${this.rect.map1400.value}`),
+					() => console.error("Cannot copy text to clipboard")
+				)
+			})
+
+			this.rect.map2000.addEventListener("click", () => {
+				this.rect.map2000.select()
+				navigator.clipboard.writeText(this.rect.map2000.value).then(
+					() => this.addMessage(`Copied to clipboard: ${this.rect.map2000.value}`),
 					() => console.error("Cannot copy text to clipboard")
 				)
 			})

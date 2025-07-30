@@ -20,7 +20,6 @@ void (function (global) {
 			[12800 + 1000, 12800 + 1000]
 		],
 		maxBoundsViscosity: 0.5,
-
 		customZoomControl: true,
 		fullscreenControl: true,
 		planeControl: true,
@@ -39,12 +38,6 @@ void (function (global) {
 		showMapBorder: true,
 		enableUrlLocation: true
 	}))
-
-	L.control.display
-		.OSRSvarbits({
-			show3d: true
-		})
-		.addTo(runescape_map)
 
 	L.control.display
 		.objects({
@@ -70,25 +63,7 @@ void (function (global) {
 		.addTo(runescape_map)
 		.bringToBack()
 
-	let nomove = L.tileLayer.main("layers-osrs/nomove/{zoom}/{plane}_{x}_{y}.png", {
-		minZoom: -4,
-		maxNativeZoom: 2,
-		maxZoom: 8
-	})
-
 	let objects = L.tileLayer.main("layers-osrs/locations/{zoom}/{plane}_{x}_{y}.png", {
-		minZoom: -4,
-		maxNativeZoom: 2,
-		maxZoom: 8
-	})
-
-	let multimap = L.tileLayer.main("layers-osrs/multimap/{zoom}/{plane}_{x}_{y}.png", {
-		minZoom: -4,
-		maxNativeZoom: 2,
-		maxZoom: 8
-	})
-
-	let implings = L.tileLayer.main("layers-osrs/implings/{zoom}/{plane}_{x}_{y}.png", {
 		minZoom: -4,
 		maxNativeZoom: 2,
 		maxZoom: 8
@@ -101,56 +76,20 @@ void (function (global) {
 		]
 	})
 
-	let crowdsourcetransports = L.crowdSourceMovement({
-		data: "data_osrs/transports_osrs.json",
-		show3d: false,
-		minZoom: -4
-	})
-	let crowdsourceteles = L.crowdSourceMovement({
-		data: "data_osrs/teleports_osrs.json",
-		show3d: false,
-		minZoom: -4
-	})
-
-	let spheres = L.crowdSourceMovement({
-		data: "data_osrs/osrs_spheres.json",
-		show3d: false,
-		minZoom: -4
-	})
-
 	let npcs = L.dynamicIcons({
 		dataPath: "data_osrs/NPCList_OSRS.json",
 		minZoom: -3
 	})
 
-	let labels = L.maplabelGroup({
-		API_KEY: "AIzaSyBrYT0-aS9VpW2Aenm-pJ2UCUhih8cZ4g8",
-		SHEET_ID: "1859HuKw5dXqmfakFd6e6kQ_PEXQA02namB4aNVQ0qpY"
-	})
-
-	const defaults = {
-		minZoom: -3,
-		maxNativeZoom: 2,
-		maxZoom: 6
-	}
-
-	let chunks = L.tileLayer("layers/small_grid/{z}.png", defaults)
+	grid.addTo(runescape_map)
 
 	L.control.layers
 		.urlParam(
 			{},
 			{
-				labels: labels,
-				crowdsourcetransports: crowdsourcetransports,
-				crowdsourceteles: crowdsourceteles,
-				multimap: multimap,
-				implings: implings,
-				spheres: spheres,
-				nomove: nomove,
 				objects: objects,
 				npcs: npcs,
-				grid: grid,
-				chunks: chunks
+				grid: grid
 			},
 			{
 				collapsed: true,
